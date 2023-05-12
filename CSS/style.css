@@ -46,6 +46,7 @@ nav {
 .enlaces-header {
     font-weight: 300;
     margin: auto;
+    transition: all ease-in-out 0.6s;
 }
 
 .nav .enlaces-header a {
@@ -61,6 +62,21 @@ nav {
     background-color: #b00000;
     border-color: #b00000;
     transition: all ease-in-out .5s;
+}
+
+.hamburguer{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in ;
+    display: none;
+}
+
+.hamburguer > i{
+    font-size: 25px;
+    line-height: 80px;
 }
 
 .titulospro {
@@ -116,9 +132,119 @@ nav {
     text-transform: uppercase;
     box-shadow: 0 8px 32px rgba(31, 73, 97, 0.46);
 }
+/* ################################## Education ############################################*/
+
+.section-education {
+    background-color: #8e939e;
+}
+
+.section-education .title {
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-education {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.education {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+}
+.education i {
+    border: 2px solid #d03d3d ;
+    border-radius: 50%;
+    background-color: #d03d3d;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.education:hover {
+    background-color: #a70404;
+    box-shadow: 0 0 8px gray;
+    transition: all ease-in-out .5s;
+    color: #fff;
+}
+
+.content-education .education a {
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content-education .education a:hover {
+    color: #fff;
+}
+
+/* ################################## Fin education ######################################*/
+
+/* ################################## certificados#######################################*/
+
+.section-certificates .title {
+    display: block;
+    margin: 15px 0 0 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+
+}
+
+.certificates {
+    width: 22%;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    
+}
+
+.certificates img {
+    height: 80px;
+    width: auto;
+}
+
+.certificates a {
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+}
+
+.certificates:hover {
+    background-color: rgb(198, 1, 1) ;
+    box-shadow: 0 0 8px blue;
+    transition: all ease-in-out .5s;
+    color: #fff;
+    transform: scale(1.2);
+    border: 2px solid aquamarine;
+}
+
+.certificates a:hover {
+    color: whitesmoke;
+}
+
+/* ################################## Fin certificado ######################################*/
 
 /* ############################### *PIE DE PAGINA ############################## */
-
 
 footer {
     background-color: rgb(70, 70, 70);
@@ -213,4 +339,87 @@ footer {
 .social-media > a > i:hover {
     background-color: rgb(190, 3, 3);
     border-color: rgb(190, 3, 3);
+}
+
+/* ################################## breackpoints ############################################*/
+
+@media screen and (max-width: 700px){
+    .hamburguer{
+        display: block;
+    }
+
+    .enlaces-header{
+        position: fixed;
+        background-color: #ff0000;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0.0% at 0 0);
+    }
+
+    .nav .hamburgueropen{
+        clip-path: circle(150.0% at 0 0);
+    }
+    
+    .nav .enlaces-header a{
+        color: #fff;
+        background-color: #fa7979;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    .textos-header{
+        margin: 0;
+    }
+
+    .contenido-header{
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .contenido-header > img{
+        margin: 25px 0 0 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* ################################## section educaion #############################*/
+    .education{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    /* ################################## section certificados #############################*/
+
+    .certificates{
+        width: 45%;
+    }
+
+    .certificates > img{
+        height: 80px;
+    }
+
+    /* ################################## section footer #############################*/
+    .partFooter > img{
+        display: none;
+    }
+
+    .partFooter{
+        width: 80%;
+        
+    }
+
 }
